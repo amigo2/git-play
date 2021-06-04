@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from homework.api.models import Company
+from rest_framework.viewsets import ModelViewSet
 
-# Create your views here.
+from .serializers import CompanySerializer
+
+class CompanyViewSet(ModelViewSet):
+    serializer_class = CompanySerializer
+    queryset = Company.objects.all().order_by("-last_update")
+
+    
