@@ -1,4 +1,4 @@
-from homework.api.models import Company
+from .models import Company
 from rest_framework.viewsets import ModelViewSet
 
 from .serializers import CompanySerializer
